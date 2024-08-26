@@ -88,7 +88,7 @@ Then, make sure to setup your site URL and redirect urls in the supabase dashboa
 
 For example:
 
-Site URL: https://headshots-starter.vercel.app
+wi-fi sad °📸Site URL: https://headshots-starter.vercel.app
 
 Redirect URL: https://headshots-starter.vercel.app/**
 
