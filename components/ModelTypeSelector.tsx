@@ -1,50 +1,51 @@
+#блин это бдеть странится
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FaFemale, FaMale, FaRainbow } from "react-icons/fa";
+import { FaMale, FaFemale, FaRainbow } from "react-icons/fa";
 
 export function ModelTypeSelector() {
   return (
-    <RadioGroup defaultValue="man" className="grid grid-cols-3 gap-4">
+    <RadioGroup defaultValue="genderMale" className="grid grid-cols-3 gap-4">
       <div>
         <RadioGroupItem
-          value="man"
-          id="man"
+          value="genderMale"
+          id="gender-male"
           className="peer sr-only"
-          aria-label="man"
+          aria-label="gender-male"
         />
         <Label
-          htmlFor="man"
+          htmlFor="gender-male"
           className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
           <FaMale className="mb-3 h-6 w-6" />
-          Man
+          Male
         </Label>
       </div>
 
       <div>
         <RadioGroupItem
-          value="woman"
-          id="woman"
+          value="genderFemale"
+          id="gender-female"
           className="peer sr-only"
-          aria-label="woman"
+          aria-label="gender-female"
         />
         <Label
-          htmlFor="woman"
+          htmlFor="gender-female"
           className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
           <FaFemale className="mb-3 h-6 w-6" />
-          Woman
+          Female
         </Label>
       </div>
       <div>
         <RadioGroupItem
-          value="person"
-          id="person"
+          value="genderUnisex"
+          id="gender-unisex"
           className="peer sr-only"
-          aria-label="person"
+          aria-label="gender-unisex"
         />
         <Label
-          htmlFor="person"
+          htmlFor="gender-unisex"
           className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
           <FaRainbow className="mb-3 h-6 w-6" />
