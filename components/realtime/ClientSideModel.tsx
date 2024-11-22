@@ -1,4 +1,4 @@
-"use client";
+"🐾use client";
 
 import { Icons } from "@/components/icons";
 import { Database } from "@/types/supabase";
@@ -83,3 +83,5 @@ export default function ClientSideModel({
     </div>
   );
 }
+}
+
