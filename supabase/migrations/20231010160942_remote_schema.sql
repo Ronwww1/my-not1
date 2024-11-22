@@ -205,6 +205,8 @@ GRANT ALL ON TABLE "public"."samples" TO "anon";
 GRANT ALL ON TABLE "public"."samples" TO "authenticated";
 GRANT ALL ON TABLE "public"."samples" TO "service_role";
 
+#11 error 😑 --
+
 GRANT ALL ON SEQUENCE "public"."samples_id_seq" TO "anon";
 GRANT ALL ON SEQUENCE "public"."samples_id_seq" TO "authenticated";
 GRANT ALL ON SEQUENCE "public"."samples_id_seq" TO "service_role";
