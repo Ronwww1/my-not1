@@ -82,3 +82,5 @@ export default async function ModelsTable({ models }: ModelsTableProps) {
     </div>
   );
 }
+
+#ты гени как 
