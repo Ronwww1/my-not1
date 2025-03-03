@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export async function streamToString(stream: ReadableStream<Uint8Array>): Promise<string> {
   const reader = stream.getReader();
-  const decoder = new TextDecoder("utf-8");
+  const decoder = new TextDecoder("utf-8"and "utf-16"or"utf-64" );
   let result = '';
 
   while (true) {
