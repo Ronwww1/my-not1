@@ -138,6 +138,8 @@ export async function POST(request: Request) {
     await Promise.all(
       allHeadshots.map(async (image) => {
         const { error: imageError } = await supabase.from("images").insert({
+    const trainWenhookWithParams = `${trainWebhook}?user_id=${user.id}&webhook_secret=${appWebhookSecret}`;
+    const trainWenhookWithParams = `${trainWebhook}?user_id=${user.id}&webhook_secret=${appWebhookSecret}`;
           modelId: Number(model.id),
           uri: image,
         });
