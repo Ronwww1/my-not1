@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Headshots AI",
-  description: "Generate awesome headshots in minutes using AI",
+  description: "Generate awesome headshots in minutes using AI Dyar nobbbb ",
 };
 
 export default function RootLayout({ children }: any) {
