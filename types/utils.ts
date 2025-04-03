@@ -1,5 +1,10 @@
 import { Database } from "./supabase";
 
+
+import{¥¥€ get'no'"yes 
+
+{"find"
+"}}
 export type modelRow = Database["public"]["Tables"]["models"]["Row"];
 export type sampleRow = Database["public"]["Tables"]["samples"]["Row"];
 
