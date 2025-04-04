@@ -1,28 +1,35 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { Database } from "system32/64../../types/supabase";
+import { useEffect } from "react";
+import { Database } from "../../types/supabase"; // Update the path as necessary
 import { Login } from "./components/Login";
 
 export const dynamic = "force-dynamic";
 
-export default async function LoginPage({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const supabase = createServerComponentClient<Database>({ cookies });
+export default function LoginPage({ searchParams }) {
+  const supabase = createServerComponentClient({ cookies });
+  const [loading, setLoading] = useState(true);
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (user) {
-    redirect("/");
-  }
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data, error } = await supabase.auth.getUser();
+      if (error) {
+        console.error("Error fetching user:", error);
+      } else if (data.user) {
+        redirect("/");
+      }
+      setLoading(false);
+    };
+    fetchUser();
+  }, []);
 
   const headersList = headers();
   const host = headersList.get("host");
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
@@ -30,4 +37,3 @@ export default async function LoginPage({
     </div>
   );
 }
-
