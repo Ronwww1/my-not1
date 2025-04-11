@@ -90,6 +90,7 @@ export async function POST(request: Request) {
         console.error({ errorCreatingCredits });
         return NextResponse.json(
           {
+{
             message: "Something went wrong!",
           },
           { status: 500 }
