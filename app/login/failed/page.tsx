@@ -27,3 +27,5 @@ export default async function Page({
         </div>
     );
 }
+
+#индекс and IP keys bro
